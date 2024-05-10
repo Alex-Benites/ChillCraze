@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "492166652243",
-    "project_id": "chillcraze",
-    "storage_bucket": "chillcraze.appspot.com"
+    "project_number": "941457330996",
+    "project_id": "chillcraze2",
+    "storage_bucket": "chillcraze2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:492166652243:android:120be8cfea02bf788101a6",
+        "mobilesdk_app_id": "1:941457330996:android:926bafa87c4580cb4e8b61",
         "android_client_info": {
           "package_name": "com.example.chill_craze_delivery"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAqUmSOV5QZ0Qyn5pgsxBoHeFxNOv80UOI"
+          "current_key": "AIzaSyCBH2eVKW4E1h2DK0_fpYNS4TvC-8PN7r4"
         }
       ],
       "services": {
