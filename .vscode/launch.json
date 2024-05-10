@@ -1,0 +1,90 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "chill_craze_delivery",
+            "cwd": "chill_craze_delivery",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "chill_craze_delivery (profile mode)",
+            "cwd": "chill_craze_delivery",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "chill_craze_delivery (release mode)",
+            "cwd": "chill_craze_delivery",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        
+        {
+            "name": "frozen_delights",
+            "cwd": "frozen_delights",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "frozen_delights (profile mode)",
+            "cwd": "frozen_delights",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "frozen_delights (release mode)",
+            "cwd": "frozen_delights",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+
+        {
+            "name": "ice_repository",
+            "cwd": "chill_craze_delivery\\packages\\ice_repository",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "ice_repository (profile mode)",
+            "cwd": "chill_craze_delivery\\packages\\ice_repository",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "ice_repository (release mode)",
+            "cwd": "chill_craze_delivery\\packages\\ice_repository",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "user_repository",
+            "cwd": "chill_craze_delivery\\packages\\user_repository",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "user_repository (profile mode)",
+            "cwd": "chill_craze_delivery\\packages\\user_repository",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "user_repository (release mode)",
+            "cwd": "chill_craze_delivery\\packages\\user_repository",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
