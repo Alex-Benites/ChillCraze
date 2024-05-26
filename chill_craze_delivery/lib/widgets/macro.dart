@@ -1,8 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyMacroWidget extends StatelessWidget {
-  const MyMacroWidget({super.key});
+
+  final String title;
+  final int value;
+  final IconData icon;
+
+  const MyMacroWidget({
+    required this.title,
+    required this.value,
+    required this.icon,
+    super.key
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -10,21 +20,24 @@ class MyMacroWidget extends StatelessWidget {
       child: Container(
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: const [
-            BoxShadow(color: Colors.grey, offset: Offset(2, 2), blurRadius: 5)
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: [
+            BoxShadow(color: Colors.grey.shade400, offset: const Offset(2, 2), blurRadius: 5)
           ]),
-      child: const Padding(
-        padding: EdgeInsets.all(8.0),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Icon(
-              CupertinoIcons.airplane,
+            FaIcon(
+              icon,
               color: Colors.redAccent,
             ),
+            const SizedBox(height: 4,),
             Text(
-              "467 Calories",
-              style: TextStyle(
+              title == "Calories"
+                ? "$value $title"
+                : "${value}g $title",
+              style: const TextStyle(
                 fontSize: 9,
               ),
             )
@@ -34,35 +47,3 @@ class MyMacroWidget extends StatelessWidget {
     ));
   }
 }
-
-var macroWidget = Expanded(
-    child: Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.grey,
-            offset: Offset(2, 2),
-            blurRadius: 5
-          )
-        ]),
-    child: const Padding(
-      padding: EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          Icon(
-            CupertinoIcons.airplane,
-            color: Colors.redAccent,
-          ),
-          Text(
-            "467 Calories",
-            style: TextStyle(
-              fontSize: 9,
-            ),
-          )
-        ],
-      ),
-    ),
-  )
-);

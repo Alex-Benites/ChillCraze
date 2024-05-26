@@ -1,11 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ice_repository/pizza_repository.dart';
 
 import '../../../widgets/macro.dart';
 
 class DetailsScreen extends StatelessWidget {
-  const DetailsScreen({super.key});
+  final Pizza pizza;
+  const DetailsScreen(this.pizza, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +32,9 @@ class DetailsScreen extends StatelessWidget {
                     blurRadius: 5
                   )
                 ],
-                image: const DecorationImage(
-                  image: AssetImage(
-                    "assets/1.png"
+                image: DecorationImage(
+                  image: NetworkImage(
+                    pizza.picture
                   )
                 )
               ),
@@ -60,11 +61,11 @@ class DetailsScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                          const Expanded(
+                          Expanded(
                             flex: 2,
                             child: Text(
-                              "Truffle Temptation Extravaganza",
-                              style: TextStyle(
+                              pizza.name,
+                              style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               
@@ -79,16 +80,17 @@ class DetailsScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Text(
-                                    "\$6.00",
+                                    "\$${pizza.price - (pizza.price * (pizza.discount) /100)}",
+
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
                                       color: Theme.of(context).colorScheme.primary,
                                     ),
                                   ),
-                                  const Text(
-                                    "\$8.00",
-                                    style: TextStyle(
+                                  Text(
+                                    "\$${pizza.price}.00",
+                                    style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       color: Colors.grey,
@@ -104,24 +106,66 @@ class DetailsScreen extends StatelessWidget {
 
                     const SizedBox(height: 12,),
 
-                    const Row(
+                    Row(
                       children: [
                         
-                        MyMacroWidget(),
+                        MyMacroWidget(
+                          title: "Calories",
+                          value: pizza.macros.calories,
+                          icon: FontAwesomeIcons.fire,
+                        ),
 
-                        SizedBox(width:10,),
+                        const SizedBox(width:10,),
 
-                        MyMacroWidget(),
+                        MyMacroWidget(
+                          title: "Protein",
+                          value: pizza.macros.proteins,
+                          icon: FontAwesomeIcons.dumbbell,
+                        ),
                         
-                        SizedBox(width:10,),
+                        const SizedBox(width:10,),
 
-                        MyMacroWidget(),
+                        MyMacroWidget(
+                          title: "Fat",
+                          value: pizza.macros.fat,
+                          icon: FontAwesomeIcons.oilWell,
+                        ),
 
-                        SizedBox(width:10,),
+                        const SizedBox(width:10,),
 
-                        MyMacroWidget(),
+                        MyMacroWidget(
+                          title: "Carbs",
+                          value: pizza.macros.carbs,
+                          icon: FontAwesomeIcons.breadSlice,
+                        ),
 
                       ],
+                    ),
+                    const SizedBox(height: 40,),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      height: 50,
+                      child: TextButton(
+                        onPressed: () {
+                          
+                        },
+                        style: TextButton.styleFrom(
+                          elevation: 3.0,
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)
+                          )
+                        ),
+                        child: const Text(
+                          "Buy now",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600
+                          ),
+                        ),
+                      ),
                     )
                   ]
                 ),
