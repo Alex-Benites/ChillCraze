@@ -1,0 +1,29 @@
+name: ice_repository
+description: The Repo that handles ices
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  cloud_firestore: ^4.17.4
+
+  # equitable: ^2.0.5
+  # firebase_auth: ^4.16.0
+  # firebase_storage: ^11.6.0
+  # rxdart: ^0.27.7
+  # path: ^1.8.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+
+flutter:
+  uses-material-design: true

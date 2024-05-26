@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
                 width: 8,
               ),
               const Text(
-                "Ice Creams",
+                "PIZZA",
                 style: TextStyle(fontWeight: FontWeight.w900, fontSize: 30),
               )
             ],

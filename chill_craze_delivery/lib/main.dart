@@ -1,5 +1,4 @@
 import 'package:chill_craze_delivery/app.dart';
-//import 'package:chill_craze_delivery/app_view.dart';
 import 'package:chill_craze_delivery/simple_bloc_observer.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
